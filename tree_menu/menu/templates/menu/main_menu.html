@@ -1,0 +1,10 @@
+{% for item in menu %}
+
+    <p><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></p>
+
+{% if item.kids %}
+    <div style="margin-left: 20px">{% include "menu/main_menu.html" with menu=item.kids %}</div>
+{% endif %}
+
+{% endfor %}
+

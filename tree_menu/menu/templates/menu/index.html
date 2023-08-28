@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load draw_menu %}
+
+{% block title %}
+    {{ block.super }} | Menu
+{% endblock title %}
+
+{% block content %}
+    <div>{% draw_menu 'main_menu' %}</div>
+    <div style="margin-top: 500px">{% draw_menu 'second_menu' %}</div>
+{% endblock content %}
